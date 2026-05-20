@@ -36,7 +36,7 @@
 
   /* HERO */
   .hero { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-  .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+  .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,23,20,0.4) 0%, rgba(26,23,20,0.65) 100%); z-index: 1; }
   .hero-content { position: relative; z-index: 2; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 0 24px; max-width: 860px; }
   .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; opacity: 0; animation: fadeUp 1s 0.3s forwards; }
@@ -190,9 +190,12 @@
 
 <!-- HERO -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="Casa-port-de-la-selva-34.jpg">
-    <source src="PROYECTO_PORT_DE_LASELVA_.mp4" type="video/mp4">
-  </video>
+  <div class="hero-video">
+    <iframe src="https://player.vimeo.com/video/1193935571?background=1&autoplay=1&loop=1&muted=1&quality=auto"
+      frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+      style="position:absolute;top:50%;left:50%;width:177.78vh;min-width:100%;height:100vh;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;">
+    </iframe>
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-eyebrow">Roses · Costa Brava · des de 1999</p>
